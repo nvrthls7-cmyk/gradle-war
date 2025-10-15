@@ -1,18 +1,9 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.akhikhl.gretty:gretty:+'
-    }
-}
-
 plugins {
     id 'java'
     id 'war'
     id 'eclipse'
     id 'idea'
-    id 'org.akhikhl.gretty'
+    id 'org.akhikhl.gretty' version '3.0.6'  // specify fixed gretty plugin version here
 }
 
 version = "1.1"
@@ -27,7 +18,7 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.25'
     implementation 'ch.qos.logback:logback-classic:1.2.3'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
-    testImplementation 'org.testng:testng:6.9.13.6' // Fixed here
+    testImplementation 'org.testng:testng:6.9.13.6'
 }
 
 gretty {
@@ -37,7 +28,7 @@ gretty {
 }
 
 war {
-    archiveFileName = 'gradle-war.war' // Fixed here
+    archiveFileName = 'gradle-war.war'
 }
 
 test {

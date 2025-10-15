@@ -1,9 +1,8 @@
 buildscript {
-    repositories {
-        jcenter()
-        // enable this to use snapshot versions of Gretty:
-        // maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
-    }
+   repositories {
+    mavenCentral()
+}
+
 
     dependencies {
         classpath 'org.akhikhl.gretty:gretty:+'
